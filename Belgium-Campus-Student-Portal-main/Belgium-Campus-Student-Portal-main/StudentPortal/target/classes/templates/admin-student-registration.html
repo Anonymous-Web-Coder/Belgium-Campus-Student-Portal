@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montserrat:wght@300;400;800&display=swap" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <title>Student Registration</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .nav-styles {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark fs-5">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fs-4 fw-bold mx-4" href="/admin-view">Admin View</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-styles" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-white" href="/admin-view/student-info">Students</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/admin-view/admin-profile">Profile</a></li>
+        </ul>
+        <div>
+          <a class="nav-link text-white mx-4" href="/admin-view/student-registration">Register New Student</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Student Registration Section onsubmit="return registerStudent()"-->
+  <div class="card offset-md-4" style="max-width: 420px; margin-top: 2em; border: none;">
+    <div class="">
+      <div id="student-signup-section" class="mx-auto mt-4 mb-4" style="max-width: 400px;">
+        <form th:action="@{/admin-view/student-register}" method="post" id="registrationForm">
+          <div align="center" class="pb-3 mb-4">
+            <h2 class="heading">Student Registration</h2>
+          </div>
+
+          <!-- First and Last Name inputs -->
+          <div class="row">
+            <div class="col-md-6 mb-5">
+              <div class="form-outline">
+                <input type="text" class="form-control" placeholder="First name" name="Student_FName" required/>
+              </div>
+            </div>
+            <div class="col-md-6 mb-5">
+              <div class="form-outline">
+                <input type="text" class="form-control" placeholder="Last name" name="Student_LName" required/>
+              </div>
+            </div>
+          </div>
+
+          <!-- Address Input -->
+          <div class="form-outline mb-5">
+            <input class="form-control" placeholder="Street Address" name="Student_Address" required/>
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-5">
+            <input type="email" class="form-control" placeholder="Email address" name="Student_Email" id="studentEmail" required/>
+            <small class="text-danger" id="emailErrorMessage" style="display: none;">Email already exists</small>
+          </div>
+
+          <!-- Course name input -->
+          <div class="form-outline mb-5">
+            <select name="Student_Course" id="courses" class="form-control" required>
+              <option value="N/A" selected>Select course...</option>
+              <option value="BCOMP">Bachelor of Computing</option>
+              <option value="BIT">Bachelor of Information Technology</option>
+              <option value="DIT">Diploma in Information Technology</option>
+              <option value="CIT">Certificate: IT (Database Development)</option>
+              <option value="NCIT">National Certificate: IT (Systems Development)</option>
+            </select>
+          </div>
+
+          <div align="center">
+            <button type="submit" class="btn btn-primary btn-block mb-3 card-button">Register Student</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script th:if="${emailExists}">
+    window.alert("Email already exists.");
+  </script>
+</body>
+</html>

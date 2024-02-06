@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Montserrat:wght@300;400;800&display=swap" rel="stylesheet">
+  <title>Admin View</title>
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .nav-styles {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark fs-5">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fs-4 fw-bold mx-4" href="/admin-view">Admin View</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse nav-styles" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link text-white" href="/admin-view/student-info">Students</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="/admin-view/admin-profile">Profile</a></li>
+        </ul>
+        <div>
+          <a class="nav-link text-white mx-4" href="/admin-view/student-registration">Register New Student</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container text-center">
+    <h1 class="my-5"><b>Belgium Campus iTversity</b></h1>
+  </div>
+
+  <div class="container mt-5">
+    <h1 class="text-center"><em>University Courses</em></h1>
+    <!-- Bachelor of Computing Course -->
+    <div class="card mt-5 mb-5">
+      <div class="card-header bg-dark text-white">
+        <h2>Bachelor of Computing</h2>
+      </div>
+      <div class="card-body">
+        <p class="lh-lg">
+          The Bachelor of Computing program offers a comprehensive curriculum to equip students with the necessary
+          skills and knowledge to excel in the field of computer science. This four-year undergraduate degree is
+          designed to provide a strong foundation in both theoretical and practical aspects of computing. Students will
+          delve into various programming languages, software development methodologies, and tools used in the industry.
+        </p>
+
+          <p class="lh-lg">
+            The curriculum includes in-depth study of algorithms and data structures, enabling students to design
+            efficient and optimized solutions to complex problems. The program also covers topics like computer
+            architecture, operating systems, and networking, giving students a holistic understanding of the digital
+            ecosystem.
+          </p>
+
+          <p class="lh-lg">
+            Hands-on projects and practical assignments are integral to the program, allowing students to apply
+            theoretical knowledge to real-world scenarios. Collaborative team projects provide students with
+            opportunities to enhance their problem-solving and communication skills, essential for success in the
+            ever-evolving tech industry.
+          </p>
+
+          <p class="lh-lg">
+            Graduates of the Bachelor of Computing program can pursue careers as software engineers, web developers,
+            system analysts, and data scientists, among other lucrative roles. They are well-equipped to adapt to
+            emerging technologies and contribute to the innovation and advancement of the digital landscape.
+          </p>
+      </div>
+    </div>
+    <!-- Bachelor of Information Technology Course -->
+    <div class="card mt-4 mb-5">
+      <div class="card-header bg-dark text-white">
+        <h2>Bachelor of Information Technology</h2>
+      </div>
+      <div class="card-body">
+        <p class="lh-lg">
+          The Bachelor of Information Technology degree program focuses on preparing students for a successful
+          career in the rapidly evolving IT industry. With a comprehensive curriculum, this program equips students
+          with the necessary knowledge and skills to excel in a variety of IT roles.
+        </p>
+
+          <p class="lh-lg">
+            Throughout the course, students will delve into a wide range of subjects, including networking, which
+            enables them to understand the intricacies of connecting devices and systems for seamless communication.
+            They will also explore the critical field of cybersecurity, learning how to safeguard digital assets and
+            protect sensitive information from cyber threats and attacks.</p>
+
+          <p class="lh-lg">
+            The program also covers web development, providing students with the tools and techniques to create dynamic
+            and user-friendly websites. In addition, students will gain expertise in database management, which
+            involves designing, implementing, and maintaining efficient databases to manage large volumes of data
+            effectively.</p>
+
+          <p class="lh-lg">
+            Software engineering is another key component of the course, allowing students to grasp the principles of
+            designing, developing, and testing software applications that meet industry standards. This hands-on
+            approach ensures that students are well-prepared to develop solutions to real-world problems and contribute
+            effectively to software development teams.
+          </p>
+
+          <p class="lh-lg">
+            Throughout their studies, students will engage in practical projects and assignments that simulate
+            real-world scenarios, enabling them to apply theoretical concepts in a practical setting. By the time they
+            graduate, students will be equipped with a versatile skill set that enables them to adapt to the dynamic
+            nature of the IT field and thrive in a variety of roles, including software developers, network
+            administrators, cybersecurity experts, and database managers.
+          </p>
+      </div>
+    </div>
+    <!-- Diploma in Information Technology Course -->
+    <div class="card mt-4 mb-5">
+      <div class="card-header bg-dark text-white">
+        <h2>Diploma in Information Technology</h2>
+      </div>
+      <div class="card-body">
+        <p class="lh-lg">The Diploma in Information Technology is a comprehensive and practical-oriented program that is meticulously
+          designed to equip students with a strong and well-rounded foundation in a wide range of IT concepts and
+          skills. This diploma goes beyond theoretical learning and delves into hands-on experiences that prepare
+          students for real-world challenges in the dynamic field of technology.
+        </p>
+
+          <p class="lh-lg">Throughout this program, students will delve into various subjects that are crucial for a successful IT
+            career. They will gain valuable insights into programming, allowing them to write code and develop
+            applications efficiently. The curriculum also focuses on database management, providing students with the
+            knowledge and skills to design, implement, and manage databases effectively.
+          </p>
+
+          <p class="lh-lg">Moreover, the diploma covers hardware and software troubleshooting, enabling students to diagnose and
+            rectify technical issues that may arise in computer systems. This practical skillset ensures that
+            graduates are well-prepared to handle the complexities of IT infrastructure in a professional setting.
+            Additionally, the program offers in-depth training in system administration, giving students the competence
+            to oversee and manage the operation of computer systems within organizations.
+          </p>
+
+          <p class="lh-lg">With a strong emphasis on hands-on learning, the Diploma in Information Technology ensures that students
+            gain practical experience and exposure to real-world IT scenarios. Graduates of this program will be
+            equipped with the skills necessary to excel in various IT roles, from software development to system
+            administration, making them highly sought-after professionals in the ever-evolving world of technology.
+          </p>
+      </div>
+    </div>
+    <!-- Certificate: IT (Database Development) Course -->
+    <div class="card mt-4 mb-5">
+      <div class="card-header bg-dark text-white">
+        <h2>Certificate: IT (Database Development)</h2>
+      </div>
+      <div class="card-body">
+        <p class="lh-lg">
+          The Certificate in IT (Database Development) course is meticulously designed to cater to individuals with a
+          keen interest in mastering the art of database development. Through this specialized program, students will
+          be equipped with the knowledge and skills necessary to excel in the dynamic world of database management.
+        </p>
+
+          <p class="lh-lg">
+            Throughout the course, students will delve into the intricate process of designing and implementing
+            databases that are not only efficient but also highly secure. They will gain insights into the principles
+            of data modeling, entity-relationship diagrams, and normalization techniques, enabling them to create
+            robust and well-structured databases.
+          </p>
+
+          <p class="lh-lg">
+            Furthermore, this program will empower students to adeptly manage data, ensuring its accuracy, integrity,
+            and availability. They will explore various data manipulation techniques, querying languages, and data
+            warehousing concepts to efficiently retrieve and manipulate information stored in databases.
+          </p>
+
+          <p class="lh-lg">
+            In addition to database design and management, students will also learn how to optimize database
+            performance. They will acquire the skills to fine-tune databases for enhanced speed and efficiency, as
+            well as identify and mitigate potential bottlenecks that might hinder system performance.
+          </p>
+
+          <p class="lh-lg">
+            The practical nature of the program allows students to apply their learning through hands-on projects,
+            simulations, and real-world scenarios. By the end of the course, students will emerge as proficient
+            database developers with the ability to contribute effectively to the IT industry, addressing the
+            ever-evolving demands of data management and utilization.
+          </p>
+      </div>
+    </div>
+    <!-- National Certificate: IT (Systems Development) Course -->
+    <div class="card mt-4 mb-5">
+      <div class="card-header bg-dark text-white">
+        <h2>National Certificate: IT (Systems Development)</h2>
+      </div>
+      <div class="card-body">
+        <p class="lh-lg">
+          The National Certificate in IT (Systems Development) program is meticulously designed to equip students
+          with the essential skills and knowledge required to excel as proficient systems developers in the
+          ever-evolving IT industry. This comprehensive course delves into a wide range of topics, including advanced
+          programming languages, cutting-edge software development methodologies, comprehensive system analysis
+          techniques, and fundamental design principles.
+        </p>
+
+          <p class="lh-lg">
+            Throughout the course, students are immersed in a dynamic learning environment where they gain hands-on
+            experience in designing and developing robust, scalable, and innovative IT systems. By providing an
+            in-depth understanding of various programming languages and frameworks, this program enables students to
+            create efficient and user-friendly applications that cater to the diverse needs of the modern technological
+            landscape.
+          </p>
+
+          <p class="lh-lg">
+            Furthermore, students are exposed to a systematic approach to software development, encompassing the
+            entire development lifecycle. They learn how to effectively analyze complex business requirements,
+            design logical and physical system architectures, and implement secure and reliable solutions that align
+            with industry best practices.
+          </p>
+
+          <p class="lh-lg">
+            The curriculum emphasizes problem-solving skills, critical thinking, and the ability to adapt to
+            emerging technologies. By the time students complete the National Certificate in IT (Systems Development),
+            they are well-equipped to tackle real-world challenges, contribute to innovative projects, and collaborate
+            effectively in cross-functional teams to develop cutting-edge IT systems that drive businesses forward in
+            the digital age.
+          </p>
+      </div>
+    </div>
+  </div>
+  <!-- Include Bootstrap JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
